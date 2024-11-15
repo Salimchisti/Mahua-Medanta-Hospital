@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion'; // Import motion from framer-motion
 import Layout from '../components/Layout';
 import burnImage from '../assets/images/burn.jpg';  
 import poisonImage from '../assets/images/toxic.jpg';
@@ -26,9 +27,9 @@ const specialties = [
 
 const Specialities = () => (
   <Layout>
-    <section className="my-16 p-10 rounded-lg">
+    <section className="min-h-screen flex flex-col justify-center items-center">
       {/* Heading Section */}
-      <div className="bg-black bg-opacity-50 p-6 rounded-lg mb-10">
+      <div className="bg-black bg-opacity-50 p-6 rounded-lg mb-10 w-full">
         <h2 className="text-3xl font-bold text-white text-center">Our 24/7 Medical Services</h2>
         <p className="mt-4 text-xl text-white text-center">
           Comprehensive medical care for every situation, available at any hour.
@@ -36,16 +37,40 @@ const Specialities = () => (
       </div>
 
       {/* Specialties Grid */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-8 w-full">
         <h3 className="text-3xl font-bold text-white mb-6">Our Specialities:</h3>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {/* Container for grid of specialties */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full"
+        initial="hidden"
+        animate="show"
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.7, // Slower delay between each card's animation (0.7s)
+            },
+          },
+        }}
+      >
         {/* Map through specialties */}
-        {specialties.map((specialty) => (
-          <div
+        {specialties.map((specialty, index) => (
+          <motion.div
             key={specialty.name}
             className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+            initial={{ opacity: 0, y: 100 }} // Start with opacity 0 and slide from below
+            animate={{ opacity: 1, y: 0 }} // Fade in and slide up
+            transition={{
+              type: 'spring',  // Spring-based transition for smoothness
+              stiffness: 120,  // Reduced stiffness for a slower effect
+              damping: 35,     // Increased damping for smoother deceleration
+              duration: 1.2,   // Increased duration for slower animation speed
+              delay: index * 0.4, // Sequential delay based on the card's index (e.g., 0, 0.4, 0.8, ...)
+            }}
+            whileInView={{ opacity: 1, y: 0 }} // Trigger animation when in view
+            viewport={{ once: false, amount: 0.2 }} // Trigger animation when 20% of the card is visible while scrolling
           >
             {/* Card with Hover Effect */}
             <button
@@ -58,9 +83,9 @@ const Specialities = () => (
               <h4 className="font-semibold text-sm text-gray-800">{specialty.name}</h4>
               <p className="text-xs text-gray-600 mt-2">{specialty.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   </Layout>
 );

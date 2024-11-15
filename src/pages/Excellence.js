@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import { Link } from 'react-router-dom';
 
 // Import images
 import surgeryImg from '../assets/images/surgery.png';
@@ -8,6 +8,36 @@ import cardiologyImg from '../assets/images/cardiology.png';
 import spinalImg from '../assets/images/spinal.png';
 import emergencyImg from '../assets/images/critical-care-icon.png';
 import urologyImg from '../assets/images/nephrology.png';
+
+const ServiceCard = ({ service, index }) => {
+  return (
+    <div className="max-w-xs mx-auto bg-white text-black rounded-lg shadow-lg transition-all duration-300 hover:cursor-pointer">
+      {service.link ? (
+        <Link to={service.link}>
+          <div className="p-6 text-center">
+            <img 
+              src={service.icon} 
+              alt={service.title} 
+              className="w-16 h-16 mx-auto transition-transform duration-300 hover:scale-125" // Increased scale on hover
+            />
+            <h2 className="text-xl font-semibold text-gray-800 mt-4">{service.title}</h2>
+            <p className="text-gray-600 mt-2">{service.description}</p>
+          </div>
+        </Link>
+      ) : (
+        <div className="p-6 text-center">
+          <img 
+            src={service.icon} 
+            alt={service.title} 
+            className="w-16 h-16 mx-auto transition-transform duration-300 hover:scale-125" // Increased scale on hover
+          />
+          <h2 className="text-xl font-semibold text-gray-800 mt-4">{service.title}</h2>
+          <p className="text-gray-600 mt-2">{service.description}</p>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Excellence = () => {
   const services = [
@@ -20,19 +50,19 @@ const Excellence = () => {
       title: 'Trauma, Joint Replacement & Arthroscopy',
       icon: traumaImg,
       description: 'Expert care in trauma management, joint replacements, and arthroscopic surgeries.',
-      link: '/orthopaedics', // Link to Orthopaedics page
+      link: '/orthopaedics',
     },
     {
       title: 'Cardiology & Cardiothoracic Surgery',
       icon: cardiologyImg,
       description: 'Advanced care for heart diseases and cardiovascular surgeries.',
-      link: '/cardiology', // Link to Cardiology page
+      link: '/cardiology',
     },
     {
       title: 'Spinal Surgery & Neurology',
       icon: spinalImg,
       description: 'Leading treatments for spinal disorders and neurological conditions.',
-      link: '/neurology', // Link to Neurology page
+      link: '/neurology',
     },
     {
       title: 'Emergency Medicine & Critical Care',
@@ -51,36 +81,7 @@ const Excellence = () => {
       <h1 className="text-3xl font-bold text-center text-black mb-8">Our Areas of Excellence</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
-          <div key={index} className="max-w-xs mx-auto bg-white text-black rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:cursor-pointer">
-            {service.link ? (
-              // Wrap the card with a Link component for navigation
-              <Link to={service.link}>
-                <div className="p-6 text-center">
-                  <div className="mb-4">
-                    <img 
-                      src={service.icon} 
-                      alt={service.title} 
-                      className="w-16 h-16 mx-auto transition-transform duration-300 transform hover:scale-150" 
-                    />
-                  </div>
-                  <h2 className="text-xl font-semibold text-gray-800">{service.title}</h2>
-                  <p className="text-gray-600 mt-2">{service.description}</p>
-                </div>
-              </Link>
-            ) : (
-              <div className="p-6 text-center">
-                <div className="mb-4">
-                  <img 
-                    src={service.icon} 
-                    alt={service.title} 
-                    className="w-16 h-16 mx-auto transition-transform duration-300 transform hover:scale-150" 
-                  />
-                </div>
-                <h2 className="text-xl font-semibold text-gray-800">{service.title}</h2>
-                <p className="text-gray-600 mt-2">{service.description}</p>
-              </div>
-            )}
-          </div>
+          <ServiceCard key={index} service={service} />
         ))}
       </div>
     </div>

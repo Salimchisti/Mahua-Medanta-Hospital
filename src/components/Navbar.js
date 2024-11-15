@@ -43,10 +43,10 @@ const Navbar = () => {
 
       {/* Menu Links for larger screens */}
       <div className={`flex-col sm:flex-row sm:flex ${isMenuOpen ? 'block' : 'hidden'} sm:block sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 absolute top-16 left-0 w-full sm:w-auto bg-transparent sm:bg-transparent sm:static z-50`}>
-        {/* Emergency Contact Button */}
+        {/* Emergency Contact Button
         <button className="px-4 sm:px-6 py-2 text-black font-semibold hover:bg-blue-600 hover:text-white focus:outline-none transition-colors duration-300">
           Emergency Contact: +91 9934209796
-        </button>
+        </button> */}
 
         {/* Overview Link */}
         <Link to="/overview">
@@ -55,12 +55,7 @@ const Navbar = () => {
           </button>
         </Link>
 
-        {/* Services Link */}
-        <Link to="/Specialities">
-          <button className="px-4 sm:px-6 py-2 text-white hover:bg-blue-600 focus:outline-none transition-colors duration-300">
-            Specialities
-          </button>
-        </Link>
+        
 
         {/* Request a Callback */}
         <button
