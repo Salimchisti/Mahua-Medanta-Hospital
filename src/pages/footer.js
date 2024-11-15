@@ -14,7 +14,7 @@ const Footer = () => {
         {/* Contact Information */}
         <div className="text-center md:text-left">
           <p className="text-sm">Contact us: <a href="tel:+919876543210" className="hover:underline">+91 9934209796</a></p>
-          <p className="text-sm">Email: <a href="mailto:contact@mahuamedanta.com" className="hover:underline">contact@mahuamedanta.com</a></p>
+          <p className="text-sm">Email: <a href="mailto:contact@mahuamedanta.com" className="hover:underline">mahuamedantahospital@gmail.com</a></p>
         </div>
         
         {/* Social Media Links */}

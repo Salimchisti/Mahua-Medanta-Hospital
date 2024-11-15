@@ -6,8 +6,8 @@ import mainNeurologyImg from '../assets/images/neurology-.webp';
 const neurologyData = {
     title: "Neurology and Neurosurgery",
     image: mainNeurologyImg,
-    description: "Ruban Hospital is one of the best Neurology Hospitals and has the Best Neurosurgeon in Patna. You must visit our hospital to get the best treatment for your neurological disease. At Ruban, there are highly experienced Neurosurgeons in our Neurology Department. We have maintained our reputation by providing world-class facilities to our patients.",
-    impactNote: "Having a neurological disease can leave a deep impact not just on you but on loved ones as well. It is important to seek medical assistance and the best Neurologist doctor from us as soon as possible when detecting any neurological symptoms. Ruban Hospital is known for treating various other problems as well.",
+    description: "Mahua Medanta Hospital is one of the best Neurology Hospitals and has the Best Neurosurgeon in Patna. You must visit our hospital to get the best treatment for your neurological disease. At Mahua Medanta Hospital, there are highly experienced Neurosurgeons in our Neurology Department. We have maintained our reputation by providing world-class facilities to our patients.",
+    impactNote: "Having a neurological disease can leave a deep impact not just on you but on loved ones as well. It is important to seek medical assistance and the best Neurologist doctor from us as soon as possible when detecting any neurological symptoms. Mahua Medanta Hospital is known for treating various other problems as well.",
     services: [
         {
             name: "Excision of Lobe (Frontal, Temporal, Cerebellum, etc.)",

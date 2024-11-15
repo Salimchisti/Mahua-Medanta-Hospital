@@ -19,7 +19,7 @@ const Cardiology = () => {
         <h1 className="text-center text-4xl font-semibold mb-6">Cardiologist and Cardiothoracic Surgeon in Bihar</h1>
         
         <p className="text-lg mb-4">
-          Ruban Memorial Hospital is the best hospital for heart surgery in Patna. The Department of Cardiac Surgery and 
+          Mahua Medanta Hospital is the best hospital for heart surgery at Mahua. The Department of Cardiac Surgery and 
           Cardiac Anesthesia is a composite unit with state-of-the-art equipment to handle open-heart surgeries for both 
           adults and pediatric patients in its two operation theatres.
         </p>
@@ -29,7 +29,7 @@ const Cardiology = () => {
           very complicated. Our cardiology and cardiothoracic surgery department regularly performs the following procedures:
         </p>
 
-        <ul className="list-disc pl-6 mb-4">
+        <ul className="list-disc pl-6 mb-4 ">
           <li><strong>Coronary Angiography:</strong> A procedure using special material and x-rays to see the flow of blood 
               through the arteries in your heart.</li>
           <li><strong>Coronary Catheterization:</strong> A minimally invasive procedure to access the coronary circulation and 
@@ -48,7 +48,7 @@ const Cardiology = () => {
         </ul>
 
         <p className="text-lg">
-          Our cardiothoracic surgeons at Ruban Memorial Hospital are experts in coronary artery bypass surgeries, total 
+          Our cardiothoracic surgeons at Mahua Medanta Memorial Hospital are experts in coronary artery bypass surgeries, total 
           arterial revascularisation, redo beating heart bypass surgeries, and minimally invasive (keyhole) surgeries.
         </p>
       </div>

@@ -7,7 +7,7 @@ const Overview = () => {
       {/* Heading Section */}
       <div className="text-center py-16 bg-green-600 text-white rounded-lg">
         <h1 className="text-4xl font-extrabold">Welcome to Mahua Medanta Hospital</h1>
-        <p className="mt-4 text-xl font-semibold">Your trusted partner in healthcare, offering 24/7 medical services</p>
+        <p className="mt-4 text-xl font-semibold">Your Trusted Partner in Healthcare, Offering 24/7 Medical Services</p>
       </div>
 
       {/* Introduction Section */}
