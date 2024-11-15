@@ -16,7 +16,7 @@ const DirectorPage = () => {
       </motion.h2>
 
       <div className="flex flex-col md:flex-row items-center justify-start md:space-x-12">
-        {/* Director Image with motion */}
+        {/* Director Image Section */}
         <motion.div
           className="w-[250px] h-[350px] md:w-[400px] md:h-[500px] overflow-hidden rounded-xl shadow-lg mb-6 md:mb-0"
           initial={{ opacity: 0, x: -100 }}
@@ -30,12 +30,15 @@ const DirectorPage = () => {
           />
         </motion.div>
 
-        {/* Director Details with motion */}
+        {/* Director Details Section with "Expand to the Right" Motion */}
         <motion.div
-          className="text-left md:max-w-[700px] flex flex-col justify-start md:ml-12 space-y-6" // Increased space between content and image
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.5 }}  // Adjusted to a slower speed
+          className="text-left md:max-w-4xl flex flex-col justify-start md:ml-12 space-y-6" // Increased space between content and image
+          initial={{ opacity: 0, x: 200 }} // Start from a higher x value to the right
+          animate={{ opacity: 1, x: 0 }}   // Animate to the normal position (0)
+          transition={{
+            duration: 1.5, // Adjust duration for smoother transition
+            delay: 0.5,    // Optional: slight delay to make the effect feel more natural
+          }}  
         >
           <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Dr. Mohammad Anwar</h3>
           <p className="text-lg text-gray-600 mb-4">Founder & Director | Mahua Medanta Hospital</p>
@@ -46,7 +49,7 @@ const DirectorPage = () => {
           <p className="text-gray-600 text-sm italic mb-4">
             "Our mission is to provide compassionate, patient-centered care with the highest standards of medical excellence."
           </p>
-          <p className="text-gray-700 text-base mb-4">
+          <p className="text-gray-700 text-base mb-4 ">
             In addition to his medical leadership, Dr. Anwar is deeply committed to public service. He has recently been appointed as the General Secretary of the Bihar Pradesh Congress Minority Department. In this role, he strives to promote the values of the Indian National Congress, advocating for social justice and inclusive community engagement.
           </p>
           <p className="text-gray-700 text-base">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion'; // Import motion for animation
 import img2 from '../assets/images/image2.jpg';
 
 const Hero = () => {
@@ -23,15 +24,18 @@ const Hero = () => {
     <div className="relative w-full overflow-hidden">
       {/* Container with a bigger height */}
       <div className="w-full h-[90vh] flex justify-center items-center">
-        {/* Carousel Image with adjusted size */}
-        <img
+        {/* Motion Image with transition effects */}
+        <motion.img
           src={images[currentImage]}
           alt="Carousel"
-          className="w-full h-full object-cover transition-all duration-500"
+          className="w-full h-full object-cover"
+          key={currentImage} // Ensure the image transitions properly
+          initial={{ opacity: 0, scale: 1.05 }} // Start with fade-out and slight scale
+          animate={{ opacity: 1, scale: 1 }} // Fade in and reset scale
+          exit={{ opacity: 0, scale: 1.05 }} // Fade-out with scale effect when changing
+          transition={{ duration: 1.5, ease: "easeInOut" }} // Smooth transition with ease-in-out
         />
       </div>
-
-
 
       {/* Overlay for Text */}
       <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center text-center">
