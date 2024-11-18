@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative flex items-center justify-between p-4 bg-gradient-to-r from-red-500 to-red-400 text-black shadow-lg">
+    <nav className="relative flex items-center justify-between p-4 bg-blue text-black shadow-lg">
       <div className="flex items-center space-x-2">
         <img src={img} alt="Caduceus Icon" className="w-10 h-10" />
         <h1 className="text-lg sm:text-2xl font-bold tracking-tight">MAHUA MEDANTA HOSPITAL</h1>

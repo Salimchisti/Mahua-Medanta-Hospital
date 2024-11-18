@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-// Import images
 import surgeryImg from '../assets/images/surgery.png';
 import traumaImg from '../assets/images/joint.png';
 import cardiologyImg from '../assets/images/cardiology.png';
@@ -11,17 +9,17 @@ import urologyImg from '../assets/images/nephrology.png';
 
 const ServiceCard = ({ service, index }) => {
   return (
-    <div className="max-w-xs mx-auto bg-white text-black rounded-lg shadow-lg transition-all duration-300 hover:cursor-pointer">
+    <div className="w-full sm:w-10/12 md:w-8/12 lg:w-7/12 mx-auto bg-white text-black rounded-lg shadow-lg transition-all duration-300 hover:cursor-pointer">
       {service.link ? (
         <Link to={service.link}>
           <div className="p-6 text-center">
             <img 
               src={service.icon} 
               alt={service.title} 
-              className="w-16 h-16 mx-auto transition-transform duration-300 hover:scale-125" // Increased scale on hover
+              className="w-16 h-16 mx-auto transition-transform duration-300 hover:scale-125" 
             />
-            <h2 className="text-xl font-semibold text-gray-800 mt-4">{service.title}</h2>
-            <p className="text-gray-600 mt-2">{service.description}</p>
+            <h2 className="text-lg md:text-xl font-semibold text-gray-800 mt-4">{service.title}</h2>
+            <p className="text-sm md:text-base text-gray-600 mt-2">{service.description}</p>
           </div>
         </Link>
       ) : (
@@ -29,10 +27,10 @@ const ServiceCard = ({ service, index }) => {
           <img 
             src={service.icon} 
             alt={service.title} 
-            className="w-16 h-16 mx-auto transition-transform duration-300 hover:scale-125" // Increased scale on hover
+            className="w-16 h-16 mx-auto transition-transform duration-300 hover:scale-125" 
           />
-          <h2 className="text-xl font-semibold text-gray-800 mt-4">{service.title}</h2>
-          <p className="text-gray-600 mt-2">{service.description}</p>
+          <h2 className="text-lg md:text-xl font-semibold text-gray-800 mt-4">{service.title}</h2>
+          <p className="text-sm md:text-base text-gray-600 mt-2">{service.description}</p>
         </div>
       )}
     </div>
@@ -77,9 +75,11 @@ const Excellence = () => {
   ];
 
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold text-center text-black mb-8">Our Areas of Excellence</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+    <div className="p-4 sm:p-6 md:p-8 lg:p-10">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-black mb-6 sm:mb-8 lg:mb-12">
+        Our Areas of Excellence
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-8 sm:gap-10">
         {services.map((service, index) => (
           <ServiceCard key={index} service={service} />
         ))}

@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // Import motion from framer-motion
+import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
-import burnImage from '../assets/images/burn.jpg';  
+import burnImage from '../assets/images/burn.jpg';
 import poisonImage from '../assets/images/toxic.jpg';
 import gynecologyImage from '../assets/images/gynecology.jpg';
 import fractureImage from '../assets/images/Fracture.jpg';
@@ -27,65 +27,65 @@ const specialties = [
 
 const Specialities = () => (
   <Layout>
-    <section className="min-h-screen flex flex-col justify-center items-center p-8">
+    <section className="min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 lg:p-12">
       {/* Heading Section */}
-      <div className="bg-white bg-opacity-90 p-8 rounded-lg mb-12 w-full max-w-4xl mx-auto text-center shadow-lg">
-        <h2 className="text-4xl font-extrabold text-gray-800">Our 24/7 Medical Services</h2>
-        <p className="mt-4 text-xl text-gray-600">
+      <div className="bg-white bg-opacity-90 p-6 sm:p-8 md:p-10 rounded-lg mb-8 sm:mb-10 lg:mb-12 w-full max-w-4xl mx-auto text-center shadow-lg">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800">
+          Our 24/7 Medical Services
+        </h2>
+        <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-600">
           Comprehensive medical care for every situation, available at any hour.
         </p>
       </div>
 
       {/* Specialties Grid */}
-      <div className="text-center mb-8 w-full">
-        <h3 className="text-3xl font-bold text-gray-800 mb-6">Our Specialities:</h3>
-      </div>
-
-      {/* Container for grid of specialties */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full px-6"
-        initial="hidden"
-        animate="show"
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.6, // Slightly faster delay between each card's animation
-            },
-          },
-        }}
-      >
-        {/* Map through specialties */}
-        {specialties.map((specialty, index) => (
-          <motion.div
-            key={specialty.name}
-            className="relative rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 ease-in-out transform hover:scale-105"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: 'spring',
-              stiffness: 100,
-              damping: 25,
-              duration: 1,
-              delay: index * 0.4,
-            }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-          >
-            {/* Card with Hover Effect */}
-            <button
-              className="w-full h-52 bg-cover bg-center bg-no-repeat transform transition-transform duration-300 hover:scale-110"
-              style={{ backgroundImage: `url(${specialty.image})`, objectFit: 'cover' }}
-            ></button>
+  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 w-full px-4 sm:px-6 md:px-8 justify-items-center"
+  initial="hidden"
+  animate="show"
+  variants={{
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.6,
+      },
+    },
+  }}
+>
+  {/* Map through specialties */}
+  {specialties.map((specialty, index) => (
+    <motion.div
+      key={specialty.name}
+      className="flex flex-col h-full rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out transform hover:scale-105 bg-white"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: 'spring',
+        stiffness: 100,
+        damping: 25,
+        duration: 1,
+        delay: index * 0.4,
+      }}
+    >
+      {/* Image Section */}
+      <div
+        className="h-40 md:h-48 lg:h-52 w-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${specialty.image})` }}
+      ></div>
 
-            {/* Specialty Name and Description */}
-            <div className="bg-white p-4 text-center rounded-b-lg shadow-lg">
-              <h4 className="font-semibold text-lg text-gray-800">{specialty.name}</h4>
-              <p className="text-sm text-gray-600 mt-2">{specialty.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+      {/* Text Section */}
+      <div className="flex-grow flex flex-col justify-between p-4">
+        <h4 className="font-semibold text-lg md:text-xl text-gray-800">
+          {specialty.name}
+        </h4>
+        <p className="text-sm md:text-base text-gray-600 mt-2">
+          {specialty.description}
+        </p>
+      </div>
+    </motion.div>
+  ))}
+</motion.div>
+
     </section>
   </Layout>
 );
