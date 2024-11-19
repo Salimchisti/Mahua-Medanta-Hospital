@@ -6,13 +6,15 @@ import cardiologyImg from '../assets/images/cardiology.png';
 import spinalImg from '../assets/images/spinal.png';
 import emergencyImg from '../assets/images/critical-care-icon.png';
 import urologyImg from '../assets/images/nephrology.png';
+import lscsImg from '../assets/images/stethoscope.png'; // Ensure path is correct
+import bloodTestImg from '../assets/images/blood-test.png'; // Add your image for blood test
 
-const ServiceCard = ({ service, index }) => {
+const ServiceCard = ({ service }) => {
   return (
-    <div className="w-full sm:w-10/12 md:w-8/12 lg:w-7/12 mx-auto bg-white text-black rounded-lg shadow-lg transition-all duration-300 hover:cursor-pointer">
+    <div className="w-full sm:w-80 md:w-80 lg:w-80 xl:w-80 mx-auto bg-white text-black rounded-lg shadow-lg transition-all duration-300 hover:cursor-pointer">
       {service.link ? (
         <Link to={service.link}>
-          <div className="p-6 text-center ">
+          <div className="p-6 text-center">
             <img 
               src={service.icon} 
               alt={service.title} 
@@ -72,6 +74,18 @@ const Excellence = () => {
       icon: urologyImg,
       description: 'Expert urology and nephrology services for kidney and urinary conditions.',
     },
+    {
+      title: 'Lower Segment Cesarean Section (LSCS)',
+      icon: lscsImg,
+      description: 'Information about LSCS surgery and its procedure.',
+      link: '/lscs-info', // Ensure this is routed correctly
+    },
+    {
+      title: 'Blood Test Services (24/7 Home Sample Collection)',
+      icon: bloodTestImg, // Add the correct image for blood test
+      description: '24/7 blood tests with home sample collection. Convenient and reliable.',
+      link: '/BloodTestInfo', // Route to Blood Test Info page
+    },
   ];
 
   return (
@@ -79,9 +93,11 @@ const Excellence = () => {
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-black mb-6 sm:mb-8 lg:mb-12">
         Our Areas of Excellence
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-8 sm:gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
         {services.map((service, index) => (
-          <ServiceCard key={index} service={service} />
+          <div key={index} className="w-full">
+            <ServiceCard service={service} />
+          </div>
         ))}
       </div>
     </div>

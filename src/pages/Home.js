@@ -4,9 +4,8 @@ import Hero from '../Hero/hero';
 import HeroPage from '../Hero/HeroPage';
 import Excellence from './Excellence';
 import Doctors from '../pages/Doctors'; // Import the Doctors component
-// import DirectorPage from './DirectorPage'
 import Specialities from './Specialities';
-// import LaparoscopyPage from './LaparoscopyPage';
+
 
 const Home = () => {
   return (
@@ -16,9 +15,7 @@ const Home = () => {
       <HeroPage />
       <Specialities />
       <Doctors />
-      {/* <DirectorPage /> */}
     </Layout>
-    {/* <LaparoscopyPage /> */}
     </>
   );
 };
