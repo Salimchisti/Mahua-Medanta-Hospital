@@ -6,7 +6,7 @@ import Excellence from './Excellence';
 import Doctors from '../pages/Doctors'; // Import the Doctors component
 // import DirectorPage from './DirectorPage'
 import Specialities from './Specialities';
-import LaparoscopyPage from './LaparoscopyPage';
+// import LaparoscopyPage from './LaparoscopyPage';
 
 const Home = () => {
   return (
@@ -17,7 +17,9 @@ const Home = () => {
       <Specialities />
       <Doctors />
       {/* <DirectorPage /> */}
-    </Layout><LaparoscopyPage /></>
+    </Layout>
+    {/* <LaparoscopyPage /> */}
+    </>
   );
 };
 

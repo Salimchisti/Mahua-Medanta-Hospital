@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-400 text-white py-8 px-4">
+    <footer className="bg-secondary text-white py-8 px-4">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
         
         {/* Copyright Section */}
