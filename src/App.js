@@ -12,6 +12,8 @@ import Cardiology from './pages/Cardiology';
 import Specialities from './pages/Specialities';
 import Neurology from './pages/Neurology';
 import ScrollToTop from './Hero/ScrollToTop'; // Import ScrollToTop component
+import DirectorPage from './pages/DirectorPage';
+import LaparoscopyPage from './pages/LaparoscopyPage';
 
 function App() {
   return (
@@ -29,6 +31,11 @@ function App() {
           <Route path="/cardiology" element={<Cardiology />} />
           <Route path='/specialities' element={<Specialities />} />
           <Route path='/neurology' element={<Neurology />} />
+          <Route path='/DirectorPage' element={<DirectorPage/>} />
+          <Route path='/LaparoscopyPage' element={<LaparoscopyPage />} />
+
+
+
         </Routes>
         <Footer />
       </div>

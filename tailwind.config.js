@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#ff0000', // Red color
-        blue: '#8B0159',    // Blue color (you can change the hex value as needed)
+        primary: '#1a02ee', // Red color
+        secondary: '#714CFE',    // Blue color (you can change the hex value as needed)
       },   
     },
   },

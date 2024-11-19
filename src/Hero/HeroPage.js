@@ -4,7 +4,7 @@ import img from '../assets/images/istockphoto-1338889633-612x612.jpg'; // Add yo
 
 const HeroPage = () => {
   return (
-    <section className="hero-section bg-blue text-black py-12 relative flex items-center justify-between">
+    <section className="hero-section bg-secondary text-black py-12 relative flex items-center justify-between">
       {/* Left content with scroll motion */}
       <motion.div
         className="max-w-3xl mx-auto space-y-4 text-center px-6 md:text-left flex-1"

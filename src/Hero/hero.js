@@ -56,33 +56,41 @@ const Hero = () => {
 
           {/* Show the options when 'Book an Appointment' is clicked */}
           {showOptions && (
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col items-center">
               <button
-                onClick={() => setShowOptions(false)} // Optional: hide options after selecting
-                className="w-full mb-2 px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+                onClick={() => setShowOptions(false)}
+                style={{ width: '200px' }}
+                className="mb-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
               >
                 Medicine Essentials
               </button>
               <button
-                onClick={() => setShowOptions(false)} // Optional: hide options after selecting
-                className="w-full mb-2 px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+                onClick={() => setShowOptions(false)}
+                style={{ width: '200px' }}
+                className="mb-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
               >
                 Doctor Appointment
               </button>
               <button
-                onClick={() => setShowOptions(false)} // Optional: hide options after selecting
-                className="w-full mb-2 px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+                onClick={() => setShowOptions(false)}
+                style={{ width: '200px' }}
+                className="mb-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
               >
                 Lab Test
               </button>
               <button
-                onClick={() => setShowOptions(false)} // Optional: hide options after selecting
-                className="w-full mb-2 px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+                onClick={() => setShowOptions(false)}
+                style={{ width: '200px' }}
+                className="mb-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
               >
                 Insurance
               </button>
             </div>
           )}
+
+
+
+
         </div>
       </div>
     </div>

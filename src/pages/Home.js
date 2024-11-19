@@ -4,19 +4,20 @@ import Hero from '../Hero/hero';
 import HeroPage from '../Hero/HeroPage';
 import Excellence from './Excellence';
 import Doctors from '../pages/Doctors'; // Import the Doctors component
-import DirectorPage from './DirectorPage'
+// import DirectorPage from './DirectorPage'
 import Specialities from './Specialities';
+import LaparoscopyPage from './LaparoscopyPage';
 
 const Home = () => {
   return (
-    <Layout>
+    <><Layout>
       <Hero />
-      <Excellence />  
+      <Excellence />
       <HeroPage />
       <Specialities />
-      <Doctors />  
-      <DirectorPage />
-    </Layout>
+      <Doctors />
+      {/* <DirectorPage /> */}
+    </Layout><LaparoscopyPage /></>
   );
 };
 

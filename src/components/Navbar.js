@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative flex items-center justify-between p-4 bg-blue text-black shadow-lg">
+    <nav className="relative flex items-center justify-between p-4 bg-secondary text-black shadow-lg">
       <div className="flex items-center space-x-2">
         <img src={img} alt="Caduceus Icon" className="w-10 h-10" />
         <h1 className="text-lg sm:text-2xl font-bold tracking-tight">MAHUA MEDANTA HOSPITAL</h1>
@@ -43,10 +43,12 @@ const Navbar = () => {
 
       {/* Menu Links for larger screens */}
       <div className={`flex-col sm:flex-row sm:flex ${isMenuOpen ? 'block' : 'hidden'} sm:block sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 absolute top-16 left-0 w-full sm:w-auto bg-transparent sm:bg-transparent sm:static z-50`}>
-        {/* Emergency Contact Button
-        <button className="px-4 sm:px-6 py-2 text-black font-semibold hover:bg-blue-600 hover:text-white focus:outline-none transition-colors duration-300">
-          Emergency Contact: +91 9934209796
-        </button> */}
+        {/* Laparoscopy Link */}
+        <Link to="/LaparoscopyPage">
+          <button className="px-4 sm:px-6 py-2 text-white hover:bg-blue-600 focus:outline-none transition-colors duration-300">
+            Laparoscopy
+          </button>
+        </Link>
 
         {/* Overview Link */}
         <Link to="/overview">
@@ -55,7 +57,12 @@ const Navbar = () => {
           </button>
         </Link>
 
-        
+        {/* Director Link */}
+        <Link to="/DirectorPage">
+          <button className="px-4 sm:px-6 py-2 text-white hover:bg-blue-600 focus:outline-none transition-colors duration-300">
+            Meet Our Director
+          </button>
+        </Link>
 
         {/* Request a Callback */}
         <button
@@ -81,6 +88,7 @@ const Navbar = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  placeholder="Enter your full name"
                   className="w-full p-3 border-2 border-gray-300 rounded-md text-black"
                   required
                 />
@@ -94,6 +102,7 @@ const Navbar = () => {
                   name="aadhar"
                   value={formData.aadhar}
                   onChange={handleChange}
+                  placeholder="Enter your Aadhar number"
                   className="w-full p-3 border-2 border-gray-300 rounded-md text-black"
                   required
                 />
@@ -107,6 +116,7 @@ const Navbar = () => {
                   name="mobile"
                   value={formData.mobile}
                   onChange={handleChange}
+                  placeholder="Enter your mobile number"
                   className="w-full p-3 border-2 border-gray-300 rounded-md text-black"
                   required
                 />
@@ -120,6 +130,7 @@ const Navbar = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  placeholder="Enter your email address"
                   className="w-full p-3 border-2 border-gray-300 rounded-md text-black"
                   required
                 />
@@ -128,7 +139,7 @@ const Navbar = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none transition-colors duration-300"
+                  className="px-6 py-3 bg-blue-600 text-black rounded-lg hover:bg-blue-700 focus:outline-none transition-colors duration-300"
                 >
                   Submit
                 </button>
