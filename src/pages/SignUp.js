@@ -21,7 +21,11 @@ const SignUp = () => {
   const validateForm = () => {
     let formErrors = {};
     if (!formData.name) formErrors.name = "Name is required.";
-    if (!formData.email) formErrors.email = "Email is required.";
+    if (!formData.email) {
+      formErrors.email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      formErrors.email = "Email format is invalid.";
+    }
     if (!formData.password) formErrors.password = "Password is required.";
     if (formData.password !== formData.confirmPassword)
       formErrors.confirmPassword = "Passwords do not match.";
@@ -117,7 +121,7 @@ const SignUp = () => {
         {/* Image Section */}
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <img
-            src="https://via.placeholder.com/400x300.png?text=Medical+Equipment"
+            src="https://via.placeholder.com/400x300.png?text=Medical+Equipment" // Replace with a relevant image URL
             alt="Medical Equipment"
             className="rounded-lg shadow-md max-w-full"
           />

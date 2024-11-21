@@ -15,6 +15,13 @@ import ScrollToTop from './Hero/ScrollToTop'; // Import ScrollToTop component
 import DirectorPage from './pages/DirectorPage';
 import LscsInfo from './pages/LscsInfo'; 
 import BloodTestInfo from './pages/BloodTestInfo';
+import LaparoscopyPage from './pages/LaparoscopyPage';
+import AppointmentPage from './pages/appointment';
+import GeneralSurgeryPage from './pages/GeneralSurgery';
+import EmergencyCarePage from './pages/EmergencyCare';
+import ContactUsPage from './pages/ContactUs';
+import Doctors from './pages/Doctors'
+
 
 function App() {
   return (
@@ -35,6 +42,12 @@ function App() {
           <Route path='/DirectorPage' element={<DirectorPage />} />
           <Route path="/lscs-info" element={<LscsInfo />} />
           <Route path='BloodTestInfo' element={<BloodTestInfo />} />
+          <Route path='LaparoscopyPage' element={<LaparoscopyPage />} />
+          <Route path='/appointment' element={<AppointmentPage />} />
+          <Route path='/GeneralSurgery' element={<GeneralSurgeryPage />} />
+          <Route path='EmergencyCarePage' element={<EmergencyCarePage />} />
+          <Route path='/ContactUs' element={<ContactUsPage />} />
+          <Route path='/Doctors' element={<Doctors/>}/>
         </Routes>
         <Footer />
       </div>

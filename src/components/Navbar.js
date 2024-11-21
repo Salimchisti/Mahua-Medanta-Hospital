@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdPhoneInTalk } from 'react-icons/md';
-import img from '../assets/images/Caduceus.png';
+import img from '../assets/images/LOGO1-removebg-preview.png';
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative flex items-center justify-between p-4 bg-secondary text-black shadow-lg">
+    <nav className="relative flex items-center justify-between p-4 bg-white text-black shadow-lg">
       <div className="flex items-center space-x-2">
         <img src={img} alt="Caduceus Icon" className="w-10 h-10" />
         <h1 className="text-lg sm:text-2xl font-bold tracking-tight">MAHUA MEDANTA HOSPITAL</h1>
@@ -36,7 +36,7 @@ const Navbar = () => {
       {/* Hamburger icon for mobile, moved to the right */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="sm:hidden focus:outline-none text-white text-2xl ml-auto"
+        className="sm:hidden focus:outline-none text-black text-2xl ml-auto"
       >
         ☰
       </button>
@@ -45,29 +45,36 @@ const Navbar = () => {
       <div className={`flex-col sm:flex-row sm:flex ${isMenuOpen ? 'block' : 'hidden'} sm:block sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 absolute top-16 left-0 w-full sm:w-auto bg-transparent sm:bg-transparent sm:static z-50`}>
         {/* Laparoscopy Link */}
         <Link to="/LaparoscopyPage">
-          <button className="px-4 sm:px-6 py-2 text-white hover:bg-blue-600 focus:outline-none transition-colors duration-300">
+          <button className="px-4 sm:px-6 py-2 text-black hover:bg-blue-300 focus:outline-none transition-colors duration-300">
             Laparoscopy
           </button>
         </Link>
 
         {/* Overview Link */}
         <Link to="/overview">
-          <button className="px-4 sm:px-6 py-2 text-white hover:bg-blue-600 focus:outline-none transition-colors duration-300">
-            Overview
+          <button className="px-4 sm:px-6 py-2 text-black hover:bg-blue-600 focus:outline-none transition-colors duration-300">
+            About Us
           </button>
         </Link>
 
         {/* Director Link */}
         <Link to="/DirectorPage">
-          <button className="px-4 sm:px-6 py-2 text-white hover:bg-blue-600 focus:outline-none transition-colors duration-300">
+          <button className="px-4 sm:px-6 py-2 text-black hover:bg-blue-600 focus:outline-none transition-colors duration-300">
             Meet Our Director
+          </button>
+        </Link>
+
+        {/* Appointment Link */}
+        <Link to="/appointment">
+          <button className="px-4 sm:px-6 py-2 text-black hover:bg-blue-600 focus:outline-none transition-colors duration-300">
+            Book an Appointment
           </button>
         </Link>
 
         {/* Request a Callback */}
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-4 sm:px-6 py-2 text-white hover:bg-blue-600 focus:outline-none transition-colors duration-300 flex items-center"
+          className="px-4 sm:px-6 py-2  bg-blue-300 text-black hover:bg-blue-600 focus:outline-none transition-colors duration-300 flex items-center"
         >
           <MdPhoneInTalk className="mr-2 text-xl" />
           Request a Callback

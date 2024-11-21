@@ -48,8 +48,8 @@ const Overview = () => {
           Ready to receive high-quality healthcare? Get in touch with us to book an appointment or to speak with a specialist.
         </p>
         <a
-          href="/contact"
-          className="mt-6 inline-block bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-all"
+          href="/appointment"
+          className="mt-6 inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-all"
         >
           Get in Touch
         </a>

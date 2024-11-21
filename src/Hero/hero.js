@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion'; // Import motion for animation
-import img2 from '../assets/images/image2.jpg';
+import React, { useState, useEffect } from 'react'; // Import useState and useEffect from React
+import { motion } from 'framer-motion'; // Import motion from framer-motion
+import img2 from '../assets/images/image2.jpg'; // Import img2 from your assets
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -15,10 +15,6 @@ const Hero = () => {
 
     return () => clearInterval(interval); // Cleanup the interval on component unmount
   }, [images.length]); // Add images.length as a dependency
-
-  const handleBookAppointment = () => {
-    setShowOptions(true); // Show the options when the button is clicked
-  };
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -47,14 +43,15 @@ const Hero = () => {
             Led by Dr. MD Anwar, offering expert care for all your medical needs.
           </p>
 
+          {/* Show the options when 'Book an Appointment' is clicked */}
           <button
-            onClick={handleBookAppointment}
-            className="mt-6 px-8 py-3 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-600 focus:outline-none transition-colors duration-300"
+            onClick={() => setShowOptions(true)} // Inline function for the button click
+            style={{ width: '200px' }}
+            className="mb-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
           >
-            Book an Appointment
+            Book Appointment
           </button>
 
-          {/* Show the options when 'Book an Appointment' is clicked */}
           {showOptions && (
             <div className="mt-6 flex flex-col items-center">
               <button
@@ -87,10 +84,6 @@ const Hero = () => {
               </button>
             </div>
           )}
-
-
-
-
         </div>
       </div>
     </div>

@@ -57,6 +57,15 @@ const DirectorPage = () => {
           </p>
         </motion.div>
       </div>
+       {/* Get in Touch Button */}
+       <div className=" text-center mb-6">
+        <a
+          href="/ContactUs"
+          className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition duration-300"
+        >
+          Get in Touch
+        </a>
+      </div>
     </div>
   );
 };
