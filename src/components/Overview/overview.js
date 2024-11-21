@@ -1,4 +1,3 @@
-// src/components/overview.js
 import React from 'react';
 
 const Overview = () => {

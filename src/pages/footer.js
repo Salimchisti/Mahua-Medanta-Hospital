@@ -47,7 +47,7 @@ const Footer = () => {
         <div>
           <h2 className="text-xl font-bold mb-4">Disclaimer</h2>
           <p className="text-sm">
-            The information provided on this website is for general informational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website. If you think you may have a medical emergency, call your doctor or emergency services immediately. HealthCare Project and its associated team do not endorse any specific tests, physicians, products, procedures, opinions, or other information that may be mentioned on this site.
+            The information provided on this website is for general informational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website. 
           </p>
         </div>
       </div>
