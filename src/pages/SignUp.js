@@ -45,7 +45,7 @@ const SignUp = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-blue-50 to-white p-4">
-      <div className="w-full max-w-4xl bg-white p-8 rounded-lg shadow-xl flex flex-col md:flex-row">
+      <div className="w-full max-w-4xl bg-white p-8 rounded-lg shadow-xl flex flex-col md:flex-row justify-center items-center space-x-8">
 
         {/* Form Section */}
         <div className="w-full md:w-1/2 mb-6 md:mb-0">
@@ -123,7 +123,7 @@ const SignUp = () => {
           <img
             src="https://via.placeholder.com/400x300.png?text=Medical+Equipment" // Replace with a relevant image URL
             alt="Medical Equipment"
-            className="rounded-lg shadow-md max-w-full"
+            className="rounded-lg shadow-md max-w-full h-auto object-cover"
           />
         </div>
       </div>

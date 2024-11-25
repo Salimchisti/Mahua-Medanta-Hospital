@@ -29,9 +29,10 @@ const Footer = () => {
           <ul className="space-y-2">
             <li><a href="/" className="hover:underline">Home</a></li>
             <li><a href="/overview" className="hover:underline">About Us</a></li>
-            <li><a href="/appointment" className="hover:underline">Appointments</a></li>
             <li><a href="/Doctors" className="hover:underline">Medical Experts</a></li>
-            <li><a href="/health-blog" className="hover:underline">Health Blog</a></li>
+            <li><a href="/health-blog" className="hover:underline">Blog</a></li>
+            <li><a href="/appointment" className="hover:underline">Carrier</a></li>
+
           </ul>
         </div>
 

@@ -36,7 +36,7 @@ const Orthopaedics = () => {
           <img 
             src={orthopaedicsImage} 
             alt="Orthopaedics Department" 
-            className="w-full h-auto rounded-xl shadow-lg object-cover" 
+            className="w-full h-auto  object-cover" 
           />
         </div>
       </div>

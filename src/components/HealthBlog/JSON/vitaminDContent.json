@@ -1,0 +1,35 @@
+{
+  "title": "Understanding Vitamin D",
+  "intro": [
+    "The body needs nutrients in small amounts to function and stay healthy. Vitamin D helps the body use calcium and phosphorus to build strong bones and teeth. It is fat-soluble...",
+    "Vitamin deficiency occurs when your body does not have enough vitamin D...",
+    "Vitamin D is required for a variety of biological activities..."
+  ],
+  "sections": [
+    {
+      "title": "Vitamin D Deficiency Causes",
+      "content": [
+        { "subtitle": "Diet", "text": "People who do not consume enough vitamin D-rich foods, such as fortified dairy products and cereals, may have low levels." },
+        { "subtitle": "Smoking", "text": "Deficiency levels are higher in smokers..." }
+      ]
+    },
+    {
+      "title": "Symptoms of Vitamin D Deficiency",
+      "content": [
+        "Bone pain.", "Loss of hair.", "Appetite loss.", "Muscle fatigue."
+      ]
+    },
+    {
+      "title": "Treatment",
+      "content": [
+        "To maintain an appropriate vitamin D level in your body, you may also find it helpful to eat more vitamin D-rich foods..."
+      ]
+    },
+    {
+      "title": "Conclusion",
+      "content": [
+        "Vitamin D is essential for the proper health of the body..."
+      ]
+    }
+  ]
+}

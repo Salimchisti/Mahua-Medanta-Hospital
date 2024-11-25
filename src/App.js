@@ -29,6 +29,15 @@ import Kidneys from './components/HealthBlog/Kidneys';
 import QuitSmoking from './components/HealthBlog/QuitSmoking';
 import VitaminD from './components/HealthBlog/VitaminD';
 import BlogDetails from './components/HealthBlog/BlogDetails';
+import BurnTreatment from './pages/BurnTreatment';
+import PoisoningToxicology from './pages/PoisoningToxicology';
+import GynecologyObstetrics from './pages/GynecologyObstetrics';
+import FractureManagement from './pages/FractureManagement';
+import TraumaCare from './pages/TraumaCare';
+import EmergencyResponse from './pages/EmergencyResponse';
+import PediatricCare from './pages/PediatricCare';
+import InternalMedicine from './pages/InternalMedicine';
+import CriticalCare from './pages/CriticalCare';
 
 
 function App() {
@@ -64,6 +73,15 @@ function App() {
           <Route path='/QuitSmoking' element={<QuitSmoking />} />
           <Route path='/VitaminD' element={<VitaminD />} />
           <Route path="/blogpost/:slug" element={<BlogDetails />} />
+          <Route path='/BurnTreatment' element={<BurnTreatment />} />
+          <Route path='/PoisoningToxicology' element={<PoisoningToxicology />} />
+          <Route path='/GynecologyObstetrics' element={<GynecologyObstetrics />} />
+          <Route path='/FractureManagement' element={<FractureManagement />} />
+          <Route path='/TraumaCare' element={<TraumaCare />} />
+          <Route path='/EmergencyResponse' element={<EmergencyResponse />} />
+          <Route path='/PediatricCare' element={<PediatricCare />} />
+          <Route path='/InternalMedicine' element={<InternalMedicine />} />
+          <Route path='/CriticalCare' element={<CriticalCare />} />
           </Routes>
         <Footer />
       </div>

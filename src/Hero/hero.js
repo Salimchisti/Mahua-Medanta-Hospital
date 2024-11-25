@@ -44,15 +44,15 @@ const Hero = () => {
           </p>
 
           {/* Show the options when 'Book an Appointment' is clicked */}
-          <button
+          {/* <button
             onClick={() => setShowOptions(true)} // Inline function for the button click
             style={{ width: '200px' }}
             className="mb-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
           >
             Book Appointment
-          </button>
+          </button> */}
 
-          {showOptions && (
+          {/* {showOptions && (
             <div className="mt-6 flex flex-col items-center">
               <button
                 onClick={() => setShowOptions(false)}
@@ -82,8 +82,8 @@ const Hero = () => {
               >
                 Insurance
               </button>
-            </div>
-          )}
+            </div> */}
+          {/* )} */}
         </div>
       </div>
     </div>

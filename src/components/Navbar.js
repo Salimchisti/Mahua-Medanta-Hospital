@@ -6,19 +6,6 @@ import img from "../assets/images/LOGO1-removebg-preview.png";
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    aadhar: "",
-    mobile: "",
-    email: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,37 +28,46 @@ const Navbar = () => {
       </div>
 
       {/* Links for larger screens */}
-      <div className="hidden sm:flex items-center space-x-6">
-        <Link
-          to="/LaparoscopyPage"
-          className="text-black hover:text-blue-500 transition-colors duration-300"
-        >
-          Laparoscopy
+      <div className="hidden sm:flex items-center space-x-6 h-16">
+        <Link to="/" className="text-black hover:text-blue-500 transition-colors duration-300">
+          Home
         </Link>
-        <Link
-          to="/overview"
-          className="text-black hover:text-blue-500 transition-colors duration-300"
-        >
+
+        {/* Services Dropdown */}
+        <div className="relative group">
+          <button className="text-black hover:text-blue-500 py-9 transition-colors duration-300">
+            Services
+          </button>
+          <div className="absolute top-full left-0 bg-white border border-gray-300 shadow-md rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-50">
+            <Link to="/LaparoscopyPage" className="block px-4 py-2 text-black hover:bg-blue-300">
+              Laparoscopy
+            </Link>
+            <Link to="/Cardiology" className="block px-4 py-2 text-black hover:bg-blue-300">
+              Cardiology
+            </Link>
+            <Link to="/Neurology" className="block px-4 py-2 text-black hover:bg-blue-300">
+              Neurology
+            </Link>
+            <Link to="/Orthopaedics" className="block px-4 py-2 text-black hover:bg-blue-300">
+              Orthopedics
+            </Link>
+            <Link to="/Specialities" className="block px-4 py-2 text-black hover:bg-blue-300">
+              More Medical Services
+            </Link>
+          </div>
+        </div>
+
+
+        <Link to="/overview" className="text-black hover:text-blue-500 transition-colors duration-300">
           About Us
         </Link>
-        <Link
-          to="/DirectorPage"
-          className="text-black hover:text-blue-500 transition-colors duration-300"
-        >
-          Meet Our Director
+        <Link to="/HealthBlog" className="text-black hover:text-blue-500 transition-colors duration-300">
+          Blog
         </Link>
-        <Link
-          to="/appointment"
-          className="text-black hover:text-blue-500 transition-colors duration-300"
-        >
-          Book an Appointment
+        <Link to="/DirectorPage" className="text-black hover:text-blue-500 transition-colors duration-300">
+          Carrier
         </Link>
-        <Link
-          to="/HealthBlog"
-          className="text-black hover:text-blue-500 transition-colors duration-300"
-        >
-         Blog
-        </Link>
+       
         <button
           onClick={() => setIsModalOpen(true)}
           className="bg-blue-300 text-black px-4 py-2 rounded hover:bg-blue-500 transition-colors duration-300 flex items-center"
@@ -92,41 +88,41 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md z-50 sm:hidden">
-          <Link
-            to="/LaparoscopyPage"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300"
-          >
-            Laparoscopy
+          <Link to="/" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
+            Home
           </Link>
-          <Link
-            to="/overview"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300"
-          >
+
+          {/* Services Dropdown for Mobile */}
+          <div className="relative group">
+            <button className="block w-full text-left px-4 py-2 text-black hover:bg-blue-300">
+              Services
+            </button>
+            <div className="pl-4">
+              <Link to="/LaparoscopyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                Laparoscopy
+              </Link>
+              <Link to="/CardiologyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                Cardiology
+              </Link>
+              <Link to="/NeurologyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                Neurology
+              </Link>
+              <Link to="/OrthopedicsPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                Orthopedics
+              </Link>
+            </div>
+          </div>
+
+          <Link to="/overview" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
             About Us
           </Link>
-          <Link
-            to="/DirectorPage"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300"
-          >
-            Meet Our Director
-          </Link>
-          <Link
-            to="/appointment"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300"
-          >
-            Book an Appointment
-          </Link>
-          <Link
-            to="/HealthBlog"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300"
-          >
+          <Link to="/HealthBlog" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
             Blog
           </Link>
+          <Link to="/DirectorPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
+            Carrier
+          </Link>
+
           <button
             onClick={() => {
               setIsModalOpen(true);
@@ -148,81 +144,14 @@ const Navbar = () => {
               Request a Callback
             </h2>
             <form onSubmit={handleSubmit}>
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-700">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Enter your full name"
-                  className="w-full p-3 border-2 border-gray-300 rounded-md text-black"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="aadhar" className="block text-gray-700">
-                  Aadhar Number
-                </label>
-                <input
-                  type="text"
-                  id="aadhar"
-                  name="aadhar"
-                  value={formData.aadhar}
-                  onChange={handleChange}
-                  placeholder="Enter your Aadhar number"
-                  className="w-full p-3 border-2 border-gray-300 rounded-md text-black"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="mobile" className="block text-gray-700">
-                  Mobile Number
-                </label>
-                <input
-                  type="tel"
-                  id="mobile"
-                  name="mobile"
-                  value={formData.mobile}
-                  onChange={handleChange}
-                  placeholder="Enter your mobile number"
-                  className="w-full p-3 border-2 border-gray-300 rounded-md text-black"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700">
-                  Email ID
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Enter your email address"
-                  className="w-full p-3 border-2 border-gray-300 rounded-md text-black"
-                  required
-                />
-              </div>
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none transition-colors duration-300"
-                >
-                  Submit
-                </button>
-              </div>
+              {/* Callback Form Fields */}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-2 right-2 text-xl text-gray-600"
+              >
+                &times;
+              </button>
             </form>
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute top-2 right-2 text-xl text-gray-600"
-            >
-              &times;
-            </button>
           </div>
         </div>
       )}

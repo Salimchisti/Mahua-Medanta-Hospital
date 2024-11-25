@@ -2,8 +2,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const HealthBlog = () => {
-  const { slug } = useParams();
-  const route = useNavigate();
+  const { slug } = useParams();  // Get slug from URL params
+  const route = useNavigate();   // Hook to navigate programmatically
 
   useEffect(() => {
     if (slug === "HealthyLifeStyle") {
@@ -19,9 +19,9 @@ const HealthBlog = () => {
     } else if (slug === "BloodSugar") {
       route("/BloodSugar");
     }
-  }, [route, slug]); // Adding `route` and `slug` to the dependency array
+  }, [route, slug]);  // Dependency array ensures effect runs when route or slug change
 
-  return null; // Return null or your component's JSX if needed
+  return null;  // No need to render anything here
 };
 
 export default HealthBlog;
