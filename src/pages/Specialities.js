@@ -10,7 +10,7 @@ import pediatricImage from '../assets/images/pediatricImage.jpg';
 import surgeryImage from '../assets/images/Surgery.jpg';
 import medicineImage from '../assets/images/medicineImage.jpg';
 import criticalCareImage from '../assets/images/criticalCareImage.jpg';
-import logo from '../assets/images/LOGO1.jpg'; // Import the logo
+// import logo from '../assets/images/LOGO1.jpg'; // Import the logo
 
 // Define specialties array before using it
 const specialties = [
@@ -31,7 +31,7 @@ const Specialities = () => (
     <section className="min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 lg:p-12 relative">
       {/* Move the logo further left */}
       <div className="absolute left-0 top-4 ml-[-20px]"> {/* Adjust ml-[-20px] for further left move */}
-        <img src={logo} alt="Logo" className="w-32 ml-40 h-auto" />
+        {/* <img src={logo} alt="Logo" className="w-32 ml-40 h-auto" /> */}
       </div>
 
       <div className="w-full max-w-4xl mx-auto text-center">

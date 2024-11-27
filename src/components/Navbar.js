@@ -6,6 +6,7 @@ import img from "../assets/images/LOGO1-removebg-preview.png";
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,10 +19,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative flex flex-wrap items-center justify-between p-4 bg-white text-black shadow-lg">
+    <nav className="relative flex flex-wrap items-center justify-between p-2 bg-white text-black shadow-lg">
       {/* Logo and Hospital Name */}
       <div className="flex items-center space-x-2">
-        <img src={img} alt="Logo" className="w-10 h-10" />
+        <img src={img} alt="Logo" className="w-20 h-20" />
         <h1 className="text-lg sm:text-2xl font-bold tracking-tight">
           MAHUA MEDANTA HOSPITAL
         </h1>
@@ -57,17 +58,16 @@ const Navbar = () => {
           </div>
         </div>
 
-
         <Link to="/overview" className="text-black hover:text-blue-500 transition-colors duration-300">
           About Us
         </Link>
         <Link to="/HealthBlog" className="text-black hover:text-blue-500 transition-colors duration-300">
           Blog
         </Link>
-        <Link to="/DirectorPage" className="text-black hover:text-blue-500 transition-colors duration-300">
-          Carrier
+        <Link to="/appointment" className="text-black hover:text-blue-500 transition-colors duration-300">
+         Book Appointment
         </Link>
-       
+
         <button
           onClick={() => setIsModalOpen(true)}
           className="bg-blue-300 text-black px-4 py-2 rounded hover:bg-blue-500 transition-colors duration-300 flex items-center"
@@ -77,10 +77,10 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Hamburger Icon for Mobile */}
+      {/* Hamburger Icon for Mobile (Aligned Right) */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="sm:hidden focus:outline-none text-black text-2xl"
+        className="sm:hidden focus:outline-none text-black text-2xl ml-auto"  // Aligning to the right
       >
         ☰
       </button>
@@ -94,23 +94,31 @@ const Navbar = () => {
 
           {/* Services Dropdown for Mobile */}
           <div className="relative group">
-            <button className="block w-full text-left px-4 py-2 text-black hover:bg-blue-300">
+            <button 
+              onClick={() => setIsServicesOpen(!isServicesOpen)} // Toggle mobile services dropdown
+              className="block w-full text-left px-4 py-2 text-black hover:bg-blue-300"
+            >
               Services
             </button>
-            <div className="pl-4">
-              <Link to="/LaparoscopyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
-                Laparoscopy
-              </Link>
-              <Link to="/CardiologyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
-                Cardiology
-              </Link>
-              <Link to="/NeurologyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
-                Neurology
-              </Link>
-              <Link to="/OrthopedicsPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
-                Orthopedics
-              </Link>
-            </div>
+            {isServicesOpen && ( // Show services links when dropdown is toggled
+              <div className="pl-4">
+                <Link to="/LaparoscopyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                  Laparoscopy
+                </Link>
+                <Link to="/CardiologyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                  Cardiology
+                </Link>
+                <Link to="/NeurologyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                  Neurology
+                </Link>
+                <Link to="/OrthopedicsPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                  Orthopedics
+                </Link>
+                <Link to="/Specialities" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                  More Medical Services
+                </Link>
+              </div>
+            )}
           </div>
 
           <Link to="/overview" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
@@ -128,7 +136,7 @@ const Navbar = () => {
               setIsModalOpen(true);
               closeMenu();
             }}
-            className="block w-full px-4 py-2 bg-blue-300 text-black hover:bg-blue-500 transition-colors duration-300 flex items-center"
+            className="block w-full px-4 py-2 bg-blue-300 text-black hover:bg-blue-500 transition-colors duration-300 items-center"
           >
             <MdPhoneInTalk className="mr-2 text-xl" />
             Request a Callback
@@ -139,17 +147,66 @@ const Navbar = () => {
       {/* Modal for Callback Form */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+          <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md relative">
+            {/* Close Button inside Modal */}
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-2 right-2 text-xl text-gray-600"
+              aria-label="Close modal"
+            >
+              &times;
+            </button>
+
             <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
               Request a Callback
             </h2>
             <form onSubmit={handleSubmit}>
-              {/* Callback Form Fields */}
-              <button
-                onClick={() => setIsModalOpen(false)}
-                className="absolute top-2 right-2 text-xl text-gray-600"
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="block w-full p-2 mb-4 border border-gray-300 rounded"
+                required
+              />
+              <input
+                type="tel"
+                placeholder="Your Phone Number"
+                className="block w-full p-2 mb-4 border border-gray-300 rounded"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email (optional)"
+                className="block w-full p-2 mb-4 border border-gray-300 rounded"
+              />
+              <select
+                className="block w-full p-2 mb-4 border border-gray-300 rounded"
+                defaultValue=""
               >
-                &times;
+                <option value="">Preferred Time for Callback</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+              </select>
+              <textarea
+                placeholder="Reason for Callback (optional)"
+                className="block w-full p-2 mb-4 border border-gray-300 rounded"
+              ></textarea>
+              <div className="flex items-center mb-4">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  required
+                  className="mr-2"
+                />
+                <label htmlFor="consent" className="text-sm">
+                  I agree to be contacted by phone.
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="block w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >
+                Request Callback
               </button>
             </form>
           </div>

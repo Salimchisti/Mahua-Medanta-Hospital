@@ -149,8 +149,8 @@ const HealthyLifeStyle = () => {
           <p>A positive mindset can greatly influence your overall health and wellbeing:</p>
           <ul className="list-disc list-inside ml-4">
             <li><strong>Practice Gratitude:</strong> Start a daily gratitude journal where you write down things you are thankful for. This practice can improve mood and reduce stress.</li>
-            <li><strong>Focus on the Good:</strong> Train your brain to focus on the positives, even during challenging times. A positive mindset helps improve mental resilience.</li>
-            <li><strong>Be Kind to Yourself:</strong> Treat yourself with compassion. Avoid self-criticism and practice self-care regularly.</li>
+            <li><strong>Stay Optimistic:</strong> Focus on solutions rather than problems. Optimism is linked to better health outcomes and increased longevity.</li>
+            <li><strong>Self-Compassion:</strong> Be kind to yourself, especially during challenging times. Avoid self-criticism and focus on self-care.</li>
           </ul>
         </>
       ),
@@ -158,7 +158,7 @@ const HealthyLifeStyle = () => {
   ];
 
   return (
-    <div className="relative flex flex-col min-h-screen bg-gray-100">
+    <div className="relative flex flex-col min-h-screen">
       <div className="p-4 md:p-8 mx-auto">
         <h2 className="text-3xl font-bold mb-6 text-center text-purple-900">10 Tips for a Healthy Lifestyle</h2>
 
@@ -166,22 +166,24 @@ const HealthyLifeStyle = () => {
           {sections.map((section, index) => (
             <div
               key={index}
-              className={`flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 ${index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
+              className={`flex ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} items-center`}
             >
-              <div className="w-full lg:w-1/2 p-4">
+              <div className="w-full md:w-1/2 p-4">
                 <img
                   src={section.image}
                   alt={section.title}
-                  className="w-full h-auto object-cover rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+                  className="w-full h-auto object-cover rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-90"
                 />
               </div>
-              <div className="w-full lg:w-1/2 p-4">
+              <div className="w-full md:w-1/2 p-4">
                 <h3 className="text-2xl font-semibold mb-2">{section.title}</h3>
                 {section.content}
               </div>
             </div>
           ))}
         </div>
+      </div>
+      <div>
       </div>
     </div>
   );

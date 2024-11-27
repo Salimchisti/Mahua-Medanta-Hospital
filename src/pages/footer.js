@@ -32,7 +32,6 @@ const Footer = () => {
             <li><a href="/Doctors" className="hover:underline">Medical Experts</a></li>
             <li><a href="/health-blog" className="hover:underline">Blog</a></li>
             <li><a href="/appointment" className="hover:underline">Carrier</a></li>
-
           </ul>
         </div>
 
@@ -41,14 +40,29 @@ const Footer = () => {
           <h2 className="text-xl font-bold mb-4">Contact Us</h2>
           <p className="text-sm">📞 <a href="tel:+919876543210" className="hover:underline">+91 73197 99463</a></p>
           <p className="text-sm">📧 <a href="mailto:info@healthcare.com" className="hover:underline">mahuamedantahospital@gmail.com</a></p>
-          <p className="text-sm">📍 Patel Bhavan Vishnu Chauk, Mahua</p>
+          <p className="text-sm">📍 Vishnu chowk, patel Bhavan, by pass road, Mahua, Sadabpur Mahua, Bihar 844122</p>
+
+          {/* Google Map Embed */}
+          <div className="mt-4">
+            <h4 className="text-sm font-semibold">Our Location</h4>
+            <iframe
+              src="https://maps.google.com/maps?q=Vishnu%20chowk,%20patel%20Bhavan,%20by%20pass%20road,%20Mahua,%20Sadabpur%20Mahua,%20Bihar%20844122&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              title="Map showing Mahua Medanta Hospital location"
+            ></iframe>
+          </div>
+
         </div>
 
         {/* Disclaimer Section */}
         <div>
           <h2 className="text-xl font-bold mb-4">Disclaimer</h2>
           <p className="text-sm">
-            The information provided on this website is for general informational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website. 
+            The information provided on this website is for general informational purposes only. While we strive to ensure the accuracy and reliability of the content, it is not intended to replace professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Mahua Medanta Hospital is not liable for any actions taken based on the information provided on this website.
           </p>
         </div>
       </div>
