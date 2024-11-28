@@ -19,7 +19,7 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Appointments */}
           <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
-            <Link to="//admin/appointments" className="block">
+            <Link to="/admin/appointments" className="block">
               <h3 className="text-xl font-semibold text-gray-800">Total Appointments</h3>
               <p className="text-gray-600 mt-2">Manage all patient appointments here.</p>
             </Link>

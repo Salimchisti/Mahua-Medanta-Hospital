@@ -48,6 +48,7 @@ import ManageLabTestsPage from './admin/adminpages/ManageLabTestsPage';
 import AdminInsurancePlans from './admin/adminpages/AdminInsurancePlans';
 import Dashboard from './admin/dashboard';
 import AdminContactUsPage from './admin/adminpages/AdminContactUsPage';
+import Login from './admin/Login'; // Import Login correctly
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         {/* Conditionally render Navbar and Footer based on route */}
         {window.location.pathname.startsWith('/admin') ? null : <Navbar />}
         <Routes>
+          {/* Main routes */}
           <Route path="/" element={<Home />} />
           <Route path="/excellence" element={<Excellence />} />
           <Route path="/signup" element={<SignUp />} />
@@ -98,17 +100,15 @@ function App() {
 
           {/* Admin routes */}
           <Route path="/admin" element={<AdminLayout />}>
-            {/* Define your admin-specific routes here */}
-            <Route index element={<Dashboard />} /> {/* Example admin dashboard route */}
+            <Route index element={<Dashboard />} /> {/* Admin dashboard */}
             <Route path="appointments" element={<AdminBookAppointments />} />
-            <Route path="/admin/doctor-appointments" element={<AdminDoctorsAppointments />} />
-            <Route path="/admin/callback-requests" element={<AdminRequestCallback />} />
-            <Route path="/admin/lab-tests" element={<ManageLabTestsPage />} />
-            <Route path="/admin/insurance" element={<AdminInsurancePlans />} />
-            <Route path="/admin/contactus" element={<AdminContactUsPage />} />
-
-            {/* Add more admin routes as needed */}
+            <Route path="doctor-appointments" element={<AdminDoctorsAppointments />} />
+            <Route path="callback-requests" element={<AdminRequestCallback />} />
+            <Route path="lab-tests" element={<ManageLabTestsPage />} />
+            <Route path="insurance" element={<AdminInsurancePlans />} />
+            <Route path="contactus" element={<AdminContactUsPage />} />
           </Route>
+          <Route path="/admin/login" element={<Login />} /> {/* Corrected Login route */}
         </Routes>
         {window.location.pathname.startsWith('/admin') ? null : <Footer />}
       </div>

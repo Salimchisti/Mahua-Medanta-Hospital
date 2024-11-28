@@ -70,7 +70,7 @@ const LaparoscopyPage = () => {
         </div>
 
         {/* Image content on the right */}
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 space-y-6 md:space-y-8">
           <img
             src={Image1}
             alt="Laparoscopy Procedure"

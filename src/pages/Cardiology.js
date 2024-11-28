@@ -1,10 +1,9 @@
 import React from 'react';
-import img from '../assets/images/Cardiology-.jpg'
-
+import img from '../assets/images/Cardiology-.jpg';
 
 const Cardiology = () => {
   return (
-    <div className="cardiology-container flex flex-col md:flex-row items-center mt-8">
+    <div className="cardiology-container flex flex-col md:flex-row items-center mt-8 px-4 sm:px-6 lg:px-12">
       {/* Image Section */}
       <div className="image-section w-full md:w-1/2 mb-6 md:mb-0">
         <img 
@@ -15,21 +14,23 @@ const Cardiology = () => {
       </div>
 
       {/* Text Section */}
-      <div className="text-section w-full md:w-1/2 pl-6">
-        <h1 className="text-center text-4xl font-semibold mb-6">Cardiologist and Cardiothoracic Surgeon in Bihar</h1>
+      <div className="text-section w-full md:w-1/2 md:pl-6">
+        <h1 className="text-center md:text-left text-2xl sm:text-4xl font-semibold mb-6">
+          Cardiologist and Cardiothoracic Surgeon in Bihar
+        </h1>
         
-        <p className="text-lg mb-4">
+        <p className="text-base sm:text-lg mb-4">
           Mahua Medanta Hospital is the best hospital for heart surgery at Mahua. The Department of Cardiac Surgery and 
           Cardiac Anesthesia is a composite unit with state-of-the-art equipment to handle open-heart surgeries for both 
           adults and pediatric patients in its two operation theatres.
         </p>
 
-        <p className="text-lg mb-4">
+        <p className="text-base sm:text-lg mb-4">
           The centre offers treatment for a wide range of cardiac cases, from neonates to adults, from routine to the 
           very complicated. Our cardiology and cardiothoracic surgery department regularly performs the following procedures:
         </p>
 
-        <ul className="list-disc pl-6 mb-4 ">
+        <ul className="list-disc pl-6 mb-4 text-base sm:text-lg">
           <li><strong>Coronary Angiography:</strong> A procedure using special material and x-rays to see the flow of blood 
               through the arteries in your heart.</li>
           <li><strong>Coronary Catheterization:</strong> A minimally invasive procedure to access the coronary circulation and 
@@ -47,7 +48,7 @@ const Cardiology = () => {
               (TAVR) or open-heart surgery.</li>
         </ul>
 
-        <p className="text-lg">
+        <p className="text-base sm:text-lg">
           Our cardiothoracic surgeons at Mahua Medanta Memorial Hospital are experts in coronary artery bypass surgeries, total 
           arterial revascularisation, redo beating heart bypass surgeries, and minimally invasive (keyhole) surgeries.
         </p>

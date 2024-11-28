@@ -105,13 +105,13 @@ const Navbar = () => {
                 <Link to="/LaparoscopyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
                   Laparoscopy
                 </Link>
-                <Link to="/CardiologyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                <Link to="/Cardiology" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
                   Cardiology
                 </Link>
-                <Link to="/NeurologyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                <Link to="/Neurology" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
                   Neurology
                 </Link>
-                <Link to="/OrthopedicsPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
+                <Link to="/Orthopaedics" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
                   Orthopedics
                 </Link>
                 <Link to="/Specialities" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
