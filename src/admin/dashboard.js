@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 const Dashboard = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
-      {/* Sidebar */}
-
-      {/* Main Content */}
       <div className="flex-1 p-6">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-gray-800">Dashboard Overview</h2>
@@ -15,7 +12,6 @@ const Dashboard = () => {
           </p>
         </div>
 
-        {/* Overview Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Appointments */}
           <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
@@ -64,7 +60,6 @@ const Dashboard = () => {
               <p className="text-gray-600 mt-2">Manage contact requests and feedback from users.</p>
             </Link>
           </div>
-
         </div>
       </div>
     </div>

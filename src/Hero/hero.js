@@ -41,46 +41,58 @@ const Hero = () => {
             Led by Dr. MD Anwar, offering expert care for all your medical needs.
           </p>
 
-          <button
-            onClick={() => setShowOptions(!showOptions)}
-            style={{ width: '200px' }}
-            className="mb-2 mt-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
-          >
-            Book Appointment
-          </button>
+          {/* Button Container */}
+          <div className="relative">
+            <button
+              onClick={() => setShowOptions(!showOptions)}
+              className="mb-2 mt-2 px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 mx-auto"
+              style={{ width: '200px' }}
+            >
+              Book Appointment
+            </button>
 
-          {showOptions && (
-            <div className="mt-2 flex flex-col items-center">
-              <button
-                onClick={() => navigate('/MedicineEssentials')}
-                style={{ width: '200px' }}
-                className="mb-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
+            {/* Options */}
+            {showOptions && (
+              <div
+                className="absolute top-full mt-2 p-4 bg-white rounded-lg shadow-lg mx-auto"
+                style={{
+                  width: '220px',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                }}
               >
-                Medicine Essentials
-              </button>
-              <button
-                onClick={() => navigate('/DoctorAppointment')}
-                style={{ width: '200px' }}
-                className="mb-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
-              >
-                Doctor Appointment
-              </button>
-              <button
-                onClick={() => navigate('/LabTestBooking')}
-                style={{ width: '200px' }}
-                className="mb-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
-              >
-                Lab Test
-              </button>
-              <button
-                onClick={() => navigate('/InsurancePlans')}
-                style={{ width: '200px' }}
-                className="mb-2 px-4 py-2 text-white bg-blue rounded-lg hover:bg-primary"
-              >
-                Insurance
-              </button>
-            </div>
-          )}
+                <button
+                  onClick={() => navigate('/MedicineEssentials')}
+                  className="mb-2 px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+                  style={{ width: '200px' }}
+                >
+                  Medicine Essentials
+                </button>
+                <button
+                  onClick={() => navigate('/DoctorAppointment')}
+                  className="mb-2 px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+                  style={{ width: '200px' }}
+                >
+                  Doctor Appointment
+                </button>
+                <button
+                  onClick={() => navigate('/LabTestBooking')}
+                  className="mb-2 px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+                  style={{ width: '200px' }}
+                >
+                  Lab Test
+                </button>
+                <button
+                  onClick={() => navigate('/InsurancePlans')}
+                  className="mb-2 px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+                  style={{ width: '200px' }}
+                >
+                  Insurance
+                </button>
+              </div>
+            )}
+          </div>
+
         </div>
       </div>
     </div>

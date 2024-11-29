@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import loginimg from '../assets/images/loginimg.webp'; // Import image
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -8,8 +9,9 @@ const Login = () => {
 
   const handleLogin = () => {
     if (username === 'admin' && password === 'admin123') {
-      // Successful login
+      // Set authentication status to true
       localStorage.setItem('isAuthenticated', 'true');
+      console.log('Login successful, redirecting to admin dashboard...');
       navigate('/admin'); // Redirect to admin dashboard
     } else {
       alert('Invalid credentials');
@@ -17,9 +19,18 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 className="text-2xl font-bold mb-4">Login</h2>
+    <div
+      className="min-h-screen bg-cover bg-center flex justify-center items-center"
+      style={{
+        backgroundImage: `url(${loginimg})`, // Set the background image for the whole screen
+      }}
+    >
+      {/* Overlay for better readability */}
+      <div className="absolute inset-0 bg-black opacity-50"></div> 
+      
+      <div className="bg-white p-8 rounded-lg shadow-lg w-96 relative z-10">
+        <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
+
         <input
           type="text"
           className="border p-2 w-full mb-4"

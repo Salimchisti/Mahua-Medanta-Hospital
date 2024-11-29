@@ -100,13 +100,14 @@ function App() {
 
           {/* Admin routes */}
           <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<Dashboard />} /> {/* Admin dashboard */}
+            <Route index element={<Dashboard />} /> {/* Admin Dashboard */}
             <Route path="appointments" element={<AdminBookAppointments />} />
             <Route path="doctor-appointments" element={<AdminDoctorsAppointments />} />
             <Route path="callback-requests" element={<AdminRequestCallback />} />
             <Route path="lab-tests" element={<ManageLabTestsPage />} />
             <Route path="insurance" element={<AdminInsurancePlans />} />
             <Route path="contactus" element={<AdminContactUsPage />} />
+
           </Route>
           <Route path="/admin/login" element={<Login />} /> {/* Corrected Login route */}
         </Routes>
