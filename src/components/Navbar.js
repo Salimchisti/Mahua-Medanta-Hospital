@@ -127,8 +127,8 @@ const Navbar = () => {
           <Link to="/HealthBlog" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
             Blog
           </Link>
-          <Link to="/DirectorPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
-            Carrier
+          <Link to="/appointment" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
+            Book Appointment
           </Link>
 
           <button

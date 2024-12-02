@@ -148,9 +148,9 @@ const HealthyLifeStyle = () => {
         <>
           <p>A positive mindset can greatly influence your overall health and wellbeing:</p>
           <ul className="list-disc list-inside ml-4">
-            <li><strong>Practice Gratitude:</strong> Start a daily gratitude journal where you write down things you are thankful for. This practice can improve mood and reduce stress.</li>
-            <li><strong>Stay Optimistic:</strong> Focus on solutions rather than problems. Optimism is linked to better health outcomes and increased longevity.</li>
-            <li><strong>Self-Compassion:</strong> Be kind to yourself, especially during challenging times. Avoid self-criticism and focus on self-care.</li>
+            <li><strong>Practice Gratitude:</strong> Start a daily gratitude journal to focus on the positives in your life.</li>
+            <li><strong>Stay Optimistic:</strong> Focus on solutions instead of dwelling on problems, and view challenges as opportunities to grow.</li>
+            <li><strong>Seek Support:</strong> If you're struggling with maintaining a positive outlook, talk to a trusted friend, family member, or counselor.</li>
           </ul>
         </>
       ),
@@ -166,7 +166,7 @@ const HealthyLifeStyle = () => {
           {sections.map((section, index) => (
             <div
               key={index}
-              className={`flex ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} items-center`}
+              className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} items-center`}
             >
               <div className="w-full md:w-1/2 p-4">
                 <img
@@ -182,8 +182,6 @@ const HealthyLifeStyle = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div>
       </div>
     </div>
   );
