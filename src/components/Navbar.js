@@ -64,8 +64,10 @@ const Navbar = () => {
         <Link to="/HealthBlog" className="text-black hover:text-blue-500 transition-colors duration-300">
           Blog
         </Link>
-        <Link to="/appointment" className="text-black hover:text-blue-500 transition-colors duration-300">
-         Book Appointment
+
+
+        <Link to="/excellence" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
+          Our Excellence
         </Link>
 
         <button
@@ -77,10 +79,10 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Hamburger Icon for Mobile (Aligned Right) */}
+      {/* Hamburger Icon for Mobile */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="sm:hidden focus:outline-none text-black text-2xl ml-auto"  // Aligning to the right
+        className="sm:hidden focus:outline-none text-black text-2xl ml-auto"
       >
         ☰
       </button>
@@ -94,13 +96,13 @@ const Navbar = () => {
 
           {/* Services Dropdown for Mobile */}
           <div className="relative group">
-            <button 
-              onClick={() => setIsServicesOpen(!isServicesOpen)} // Toggle mobile services dropdown
+            <button
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
               className="block w-full text-left px-4 py-2 text-black hover:bg-blue-300"
             >
               Services
             </button>
-            {isServicesOpen && ( // Show services links when dropdown is toggled
+            {isServicesOpen && (
               <div className="pl-4">
                 <Link to="/LaparoscopyPage" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300">
                   Laparoscopy
@@ -127,16 +129,18 @@ const Navbar = () => {
           <Link to="/HealthBlog" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
             Blog
           </Link>
-          <Link to="/appointment" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
-            Book Appointment
+
+          <Link to="/excellence" onClick={closeMenu} className="block px-4 py-2 text-black hover:bg-blue-300 transition-colors duration-300">
+            Our Excellence
           </Link>
 
+          {/* Updated Button */}
           <button
             onClick={() => {
-              setIsModalOpen(true);
               closeMenu();
+              setIsModalOpen(true);
             }}
-            className="block w-full px-4 py-2 bg-blue-300 text-black hover:bg-blue-500 transition-colors duration-300 items-center"
+            className="flex items-center justify-center w-full px-4 py-2 bg-blue-300 text-black rounded hover:bg-blue-500 transition-colors duration-300"
           >
             <MdPhoneInTalk className="mr-2 text-xl" />
             Request a Callback
@@ -148,7 +152,6 @@ const Navbar = () => {
       {isModalOpen && (
         <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md relative">
-            {/* Close Button inside Modal */}
             <button
               onClick={() => setIsModalOpen(false)}
               className="absolute top-2 right-2 text-xl text-gray-600"

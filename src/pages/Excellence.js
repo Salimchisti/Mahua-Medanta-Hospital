@@ -9,6 +9,7 @@ import urologyImg from '../assets/images/nephrology.png';
 import lscsImg from '../assets/images/stethoscope.png'; // Ensure path is correct
 import bloodTestImg from '../assets/images/blood-test.png'; // Add your image for blood test
 
+
 const ServiceCard = ({ service }) => {
   return (
     <div className="w-full sm:w-80 md:w-80 lg:w-80 xl:w-80 mx-auto bg-white text-black rounded-lg shadow-lg transition-all duration-300 hover:cursor-pointer">

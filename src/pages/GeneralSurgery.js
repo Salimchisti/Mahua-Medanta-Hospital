@@ -82,8 +82,8 @@ const GeneralSurgeryPage = () => {
       <div className="mt-16 text-center">
         <h2 className="text-3xl font-semibold">Get in Touch with Our Surgeons</h2>
         <p className="mt-4 text-lg">Our expert general surgeons are ready to help you. Whether you need a consultation or are seeking treatment, contact us today.</p>
-        <a href="/contact" className="mt-8 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-          Book a Consultation
+        <a href="/appointment" className="mt-8 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+          Book Appointment
         </a>
       </div>
     </div>

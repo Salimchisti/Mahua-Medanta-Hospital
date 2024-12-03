@@ -37,43 +37,53 @@ const ContactUsPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div className="container mx-auto px-4 py-6">
       {/* Hero Section with Image */}
-      <img
-        src={emergencyCareImage} // Use the imported image path
-        alt="Emergency Care"
-        className="w-full h-auto" // Ensuring the image maintains its aspect ratio
-      />
+      <div className="mb-8">
+        <img
+          src={emergencyCareImage} // Use the imported image path
+          alt="Emergency Care"
+          className="w-full h-auto object-cover rounded-md"
+        />
+      </div>
 
-      {/* Contact Information Section (No borders or containers) */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="text-lg md:text-xl ml-10 mt-12">
-          <h2 className="text-2xl font-semibold mb-4">Our Contact Details</h2>
-          <p>
+      {/* Contact Information Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="text-base md:text-lg px-4">
+          <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
+            Our Contact Details
+          </h2>
+          <p className="mb-2">
             <strong>Phone:</strong> +91 73197 99463
           </p>
-          <p>
+          <p className="mb-2">
             <strong>Email:</strong> mahuamedantahospital@gmail.com
           </p>
-          <p>
+          <p className="mb-2">
             <strong>Address:</strong> Patel Bhavan Vishnu Chowk, Mahua
           </p>
           <p className="mt-4">
-            Our team is available 24/7 for any urgent queries. Please don’t hesitate to reach out to us.
+            Our team is available 24/7 for any urgent queries. Please don’t
+            hesitate to reach out to us.
           </p>
         </div>
 
         {/* Contact Form */}
-        <div className="text-lg md:text-xl">
-          <h2 className="text-2xl font-semibold mb-4">Send Us a Message</h2>
+        <div className="px-4">
+          <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
+            Send Us a Message
+          </h2>
           {isSubmitted ? (
             <div className="text-center text-green-600 mt-4">
               <p>Thank you for your message! We will get back to you shortly.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="mt-4">
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-lg font-medium">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-lg font-medium mb-1"
+                >
                   Name
                 </label>
                 <input
@@ -82,13 +92,16 @@ const ContactUsPage = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                   required
                 />
               </div>
 
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-lg font-medium">
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-lg font-medium mb-1"
+                >
                   Email
                 </label>
                 <input
@@ -97,13 +110,16 @@ const ContactUsPage = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                   required
                 />
               </div>
 
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-lg font-medium">
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-lg font-medium mb-1"
+                >
                   Message
                 </label>
                 <textarea
@@ -111,7 +127,7 @@ const ContactUsPage = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                   rows="4"
                   required
                 ></textarea>
@@ -119,7 +135,7 @@ const ContactUsPage = () => {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Send Message
               </button>

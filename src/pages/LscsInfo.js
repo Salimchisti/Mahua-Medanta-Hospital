@@ -1,4 +1,5 @@
 import React from "react";
+import lscsimg1 from '../assets/images/LSCS---Lower-Segment-Cesarean-Section.jpg';
 
 const LscsInfo = () => {
   const indications = [
@@ -56,61 +57,77 @@ const LscsInfo = () => {
   ];
 
   return (
-    <div className="p-6 sm:p-10 md:p-12 bg-gray-50 text-gray-800">
-      <h1 className="text-2xl sm:text-3xl font-bold text-center mb-8">
+    <div className="p-6 sm:p-10 md:p-12 bg-gray-100 text-gray-900">
+      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-indigo-600">
         Lower Segment Cesarean Section (LSCS)
       </h1>
-      
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">What is LSCS?</h2>
-        <p>
+
+      {/* Image for LSCS */}
+      <div className="flex justify-center mb-10">
+        <img
+          src={lscsimg1}
+          alt="LSCS Procedure"
+          className="w-full sm:w-4/5 md:w-3/5 lg:w-1/2 rounded-lg shadow-md border border-gray-200"
+        />
+      </div>
+
+      {/* Section: What is LSCS? */}
+      <section className="mb-10 bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold mb-4 text-indigo-500">What is LSCS?</h2>
+        <p className="text-gray-700 leading-relaxed">
           LSCS is a surgical procedure to deliver a baby through an incision in
           the mother’s abdomen and uterus. It is often recommended when vaginal
           delivery poses risks to the mother or baby.
         </p>
       </section>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Indications for LSCS</h2>
+      {/* Section: Indications */}
+      <section className="mb-10 bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold mb-4 text-indigo-500">Indications for LSCS</h2>
         {indications.map((item, index) => (
-          <div key={index} className="mb-4">
-            <h3 className="text-lg font-medium mb-2">{item.category}</h3>
-            <ul className="list-disc pl-6">
+          <div key={index} className="mb-6">
+            <h3 className="text-xl font-medium text-gray-800 mb-3">{item.category}</h3>
+            <ul className="list-disc pl-6 text-gray-700">
               {item.points.map((point, i) => (
-                <li key={i}>{point}</li>
+                <li key={i} className="mb-2">
+                  {point}
+                </li>
               ))}
             </ul>
           </div>
         ))}
       </section>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">The LSCS Procedure</h2>
-        <ol className="list-decimal pl-6">
+      {/* Section: Procedure */}
+      <section className="mb-10 bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold mb-4 text-indigo-500">The LSCS Procedure</h2>
+        <ol className="list-decimal pl-6 text-gray-700">
           {steps.map((step, index) => (
-            <li key={index} className="mb-2">
+            <li key={index} className="mb-3">
               {step}
             </li>
           ))}
         </ol>
       </section>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Recovery Tips</h2>
-        <ul className="list-disc pl-6">
+      {/* Section: Recovery Tips */}
+      <section className="mb-10 bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold mb-4 text-indigo-500">Recovery Tips</h2>
+        <ul className="list-disc pl-6 text-gray-700">
           {recoveryTips.map((tip, index) => (
-            <li key={index} className="mb-2">
+            <li key={index} className="mb-3">
               {tip}
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Risks and Complications</h2>
-        <ul className="list-disc pl-6">
+      {/* Section: Risks and Complications */}
+      <section className="mb-10 bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold mb-4 text-indigo-500">Risks and Complications</h2>
+        <ul className="list-disc pl-6 text-gray-700">
           {risks.map((risk, index) => (
-            <li key={index} className="mb-2">
+            <li key={index} className="mb-3">
               {risk}
             </li>
           ))}

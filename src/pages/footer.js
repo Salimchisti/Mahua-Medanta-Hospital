@@ -31,7 +31,7 @@ const Footer = () => {
             <li><a href="/overview" className="hover:underline">About Us</a></li>
             <li><a href="/Doctors" className="hover:underline">Medical Experts</a></li>
             <li><a href="/health-blog" className="hover:underline">Blog</a></li>
-            <li><a href="/appointment" className="hover:underline">Carrier</a></li>
+            <li><a href="/ContactUs" className="hover:underline">Contact Us</a></li>
           </ul>
         </div>
 
@@ -53,7 +53,7 @@ const Footer = () => {
               allowFullScreen=""
               loading="lazy"
               title="Map showing Mahua Medanta Hospital location"
-            ></iframe>
+            />
           </div>
 
         </div>
